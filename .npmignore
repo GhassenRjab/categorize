@@ -5,3 +5,10 @@
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# Test files
+src/**/*.test.js
+
+# Other files
+.editorconfig
+.eslintrc.js
