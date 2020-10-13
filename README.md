@@ -2,7 +2,7 @@
 
 This library categorizes arrays. It organizes array elements into categories.
 
-##  Installation
+## Installation
 
 Using npm
 
@@ -42,13 +42,18 @@ const animals = [
   { name: "Luna", type: "Dog" },
 ];
 const categories = [
-  { name: "cats", filter: ({ type }) => type === "Cat" },
+  { name: "cats", filter: (animal) => animal.type === "Cat" },
   { name: "dogs", filter: ({ type }) => type === "Dog" },
-  { name: "birds", filter: ({ type }) => type === "Bird" },
+  {
+    name: "Spencer",
+    filter: ({ type, name }) => type === "Dog" && name === "Spencer",
+  },
 ];
 const animalsCategorized = await categorize(animals, categories);
 ```
+
 `animalsCategorized` will contain this object:
+
 ```json
 {
   "cats": [
@@ -60,13 +65,17 @@ const animalsCategorized = await categorize(animals, categories);
     { "name": "Tyzon", "type": "Dog" },
     { "name": "Pablo", "type": "Dog" },
     { "name": "Luna", "type": "Dog" }
-  ]
+  ],
+  "Spencer": [{ "name": "Spencer", "type": "Dog" }]
 }
 ```
+
 With this format, you can use array destructuring to have you elements categorized inside their own variables, like this:
+
 ```js
 const { cats, dogs } = await categorize(animals, categories);
 ```
+
 The category's name will be used to contain the array elements. And the category's filter will be used to filter out these array elements.
 
 ## Documentation
@@ -83,9 +92,15 @@ Both functions accepts the same parameters, which are:
 
 - The **array** that will be categorized;
 - The **categories** array, each category needs to have:
-    - A unique **name** that will be used to contain the categorized elements;
-    - A **filter** that will be used to test against the array elements to determine to what category they belong.
+  - A unique **name** that will be used to contain the categorized elements;
+  - A **filter** that will be used to test against the array elements to determine to what category they belong.
 
-This library uses `yup` to validate the parameters passed to categorize.
-It will throw a `yup`'s `ValidationError` if the parameters are not well passed.
-All validation tests can be found [here](src/lib/validation.test.js) 
+This library parameters passed to categorize are validated before starting any computation.
+The function will throw a `ValidationError` if the parameters are not well passed.
+All validation tests can be found [here](src/lib/validation/validate.test.js).
+
+You can import `ValidationError` like this:
+
+```js
+const { ValidationError } = require('categorize');
+```
