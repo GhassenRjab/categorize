@@ -9,14 +9,14 @@ describe("categorize", () => {
       { name: "Tyzon", type: "Dog" },
       { name: "Pablo", type: "Dog" },
       { name: "Luna", type: "Dog" },
-      { name: "Taxi", type: "Bird" },
-      { name: "Brad Pitt", type: "Bird" },
-      { name: "Angelina Jolie", type: "Bird" },
     ];
     const categories = [
-      { name: "cats", filter: ({ type }) => type === "Cat" },
+      { name: "cats", filter: (animal) => animal.type === "Cat" },
       { name: "dogs", filter: ({ type }) => type === "Dog" },
-      { name: "birds", filter: ({ type }) => type === "Bird" },
+      {
+        name: "Spencer",
+        filter: ({ type, name }) => type === "Dog" && name === "Spencer",
+      },
     ];
     const animalsCategorized = await categorize(animals, categories);
     expect(animalsCategorized).toEqual({
@@ -30,11 +30,7 @@ describe("categorize", () => {
         { name: "Pablo", type: "Dog" },
         { name: "Luna", type: "Dog" },
       ],
-      birds: [
-        { name: "Taxi", type: "Bird" },
-        { name: "Brad Pitt", type: "Bird" },
-        { name: "Angelina Jolie", type: "Bird" },
-      ],
+      Spencer: [{ name: "Spencer", type: "Dog" }],
     });
   });
 });
@@ -48,14 +44,10 @@ describe("categorizeSync", () => {
       { name: "Tyzon", type: "Dog" },
       { name: "Pablo", type: "Dog" },
       { name: "Luna", type: "Dog" },
-      { name: "Taxi", type: "Bird" },
-      { name: "Brad Pitt", type: "Bird" },
-      { name: "Angelina Jolie", type: "Bird" },
     ];
     const categories = [
       { name: "cats", filter: ({ type }) => type === "Cat" },
       { name: "dogs", filter: ({ type }) => type === "Dog" },
-      { name: "birds", filter: ({ type }) => type === "Bird" },
     ];
     const animalsCategorized = categorizeSync(animals, categories);
     expect(animalsCategorized).toEqual({
@@ -68,11 +60,6 @@ describe("categorizeSync", () => {
         { name: "Tyzon", type: "Dog" },
         { name: "Pablo", type: "Dog" },
         { name: "Luna", type: "Dog" },
-      ],
-      birds: [
-        { name: "Taxi", type: "Bird" },
-        { name: "Brad Pitt", type: "Bird" },
-        { name: "Angelina Jolie", type: "Bird" },
       ],
     });
   });

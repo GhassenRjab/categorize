@@ -1,7 +1,8 @@
-const argsSchema = require("./lib/validation");
+const { validate, ValidationError } = require("./lib/validation");
 
-const categorize = (array, categories) =>
-  array.reduce((result, animal) => {
+const categorize = (array, categories) => {
+  validate(array, categories);
+  return array.reduce((result, animal) => {
     categories.forEach(({ name, filter }) => {
       if (filter(animal)) {
         if (!result[name]) {
@@ -12,19 +13,10 @@ const categorize = (array, categories) =>
     });
     return result;
   }, {});
-
-exports.categorize = async (arrayArg, categoriesArg) => {
-  const { array, categories } = await argsSchema.validate({
-    array: arrayArg,
-    categories: categoriesArg,
-  });
-  return categorize(array, categories);
 };
 
-exports.categorizeSync = (arrayArg, categoriesArg) => {
-  const { array, categories } = argsSchema.validateSync({
-    array: arrayArg,
-    categories: categoriesArg,
-  });
-  return categorize(array, categories);
-};
+exports.categorize = async (array, categories) => categorize(array, categories);
+
+exports.categorizeSync = (array, categories) => categorize(array, categories);
+
+exports.ValidationError = ValidationError;
