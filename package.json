@@ -21,9 +21,6 @@
     "url": "https://github.com/GhassenRjab/categorize/issues"
   },
   "homepage": "https://github.com/GhassenRjab/categorize#readme",
-  "dependencies": {
-    "yup": "^0.29.3"
-  },
   "devDependencies": {
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.12.0",

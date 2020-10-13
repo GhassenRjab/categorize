@@ -308,15 +308,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.5":
-  version: 7.11.2
-  resolution: "@babel/runtime@npm:7.11.2"
-  dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: 2f127ad60a0f0568faa0044e5b48329d8166c7fd3a0a3ce774070010a1c441ebf5570f526dd6bb26e214fb1a01bb987ab6a4c3f60a00f04d02448939f4c61e1e
-  languageName: node
-  linkType: hard
-
 "@babel/template@npm:^7.10.4, @babel/template@npm:^7.3.3":
   version: 7.10.4
   resolution: "@babel/template@npm:7.10.4"
@@ -1225,7 +1216,6 @@ __metadata:
     eslint-plugin-prettier: ^3.1.4
     jest: ^26.5.2
     prettier: 2.1.2
-    yup: ^0.29.3
   languageName: unknown
   linkType: soft
 
@@ -2086,13 +2076,6 @@ __metadata:
   version: 2.0.2
   resolution: "flatted@npm:2.0.2"
   checksum: a3e5fb71ad3c4f0661cd3899864812bcf3f64bdf6aa5f33f967c9c2a8a5f0c7219707e864c0602115fef40e093415f76a43e77afd0a86990904e2217ddb44eb4
-  languageName: node
-  linkType: hard
-
-"fn-name@npm:~3.0.0":
-  version: 3.0.0
-  resolution: "fn-name@npm:3.0.0"
-  checksum: dd2190001862d3ea6d1f0788c58d083593166debfa65ff77473a3d37795548e92e5d050ca32f90781fa5c270901694c45022fc90ff2fa50f44aa302f20916589
   languageName: node
   linkType: hard
 
@@ -3454,13 +3437,6 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:^4.17.11":
-  version: 4.17.15
-  resolution: "lodash-es@npm:4.17.15"
-  checksum: ee2871b76deefd1754527e659a8c8b688f2e427e67b30709296878e18ad9cb54b4f0fc16a7161298156b4e0ebc2a37dfe501a3ea8725f195763f9de8a7ba6da6
-  languageName: node
-  linkType: hard
-
 "lodash.sortby@npm:^4.7.0":
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
@@ -3468,7 +3444,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.19":
   version: 4.17.20
   resolution: "lodash@npm:4.17.20"
   checksum: c62101d2500c383b5f174a7e9e6fe8098149ddd6e9ccfa85f36d4789446195f5c4afd3cfba433026bcaf3da271256566b04a2bf2618e5a39f6e67f8c12030cb6
@@ -4143,13 +4119,6 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"property-expr@npm:^2.0.2":
-  version: 2.0.4
-  resolution: "property-expr@npm:2.0.4"
-  checksum: fffa6ba8a21cbbf694652755fe2cf4d68bfb8c625f2de6424910edf2c7d50a3f4e7e5ac749b8fe42261cb63d12148d7612f207397d244151e2d7fb853ce7bf5b
-  languageName: node
-  linkType: hard
-
 "psl@npm:^1.1.28":
   version: 1.8.0
   resolution: "psl@npm:1.8.0"
@@ -4223,13 +4192,6 @@ fsevents@^2.1.2:
     string_decoder: ~1.1.1
     util-deprecate: ~1.0.1
   checksum: 6e3826560627a751feb3a8aec073ef94c6e47b8c8e06eb5d136323b5f09db9d2077c23a42a8d54ed0123695af54b36c1e4271a8ec55112b15f4b89020d8dec72
-  languageName: node
-  linkType: hard
-
-"regenerator-runtime@npm:^0.13.4":
-  version: 0.13.7
-  resolution: "regenerator-runtime@npm:0.13.7"
-  checksum: 6ef567c662088b1b292214920cbd72443059298d477f72e1a37e0a113bafbfac9057cbfe35ae617284effc4b423493326a78561bbff7b04162c7949bdb9624e8
   languageName: node
   linkType: hard
 
@@ -4915,13 +4877,6 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"synchronous-promise@npm:^2.0.13":
-  version: 2.0.15
-  resolution: "synchronous-promise@npm:2.0.15"
-  checksum: 3462a5aa243969dc07aeeac00d77d56fc49663441f0167d48b39468e673cb294ce18ec1848aa24cd04961a0678d374f4cd77226d8288ebd57873d24a2a20f7eb
-  languageName: node
-  linkType: hard
-
 "table@npm:^5.2.3":
   version: 5.4.6
   resolution: "table@npm:5.4.6"
@@ -5034,13 +4989,6 @@ fsevents@^2.1.2:
     regex-not: ^1.0.2
     safe-regex: ^1.1.0
   checksum: ed733fdff8970628ef2d425564d1331a812e57cbb6ab7675c970046b2b792cbf2386c8292e45bb201bf85ca71a7708e3e1ffb979f5cd089ad4a82a12df75939b
-  languageName: node
-  linkType: hard
-
-"toposort@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "toposort@npm:2.0.2"
-  checksum: 9e70bf92de5e65e77e89065f34b642a9ae75be5cf4896152b5a131ca66c77c4d9edf056942e988e29b534a83643f38860e148aa939cd3c489d00abbf5639f54f
   languageName: node
   linkType: hard
 
@@ -5475,20 +5423,5 @@ fsevents@^2.1.2:
     y18n: ^4.0.0
     yargs-parser: ^18.1.2
   checksum: dbf687d6b938f01bbf11e158dde6df906282b70cd9295af0217ee8cefbd83ad09d49fa9458d0d5325b0e66f03df954a38986db96f91e5b46ccdbbaf9a0157b23
-  languageName: node
-  linkType: hard
-
-"yup@npm:^0.29.3":
-  version: 0.29.3
-  resolution: "yup@npm:0.29.3"
-  dependencies:
-    "@babel/runtime": ^7.10.5
-    fn-name: ~3.0.0
-    lodash: ^4.17.15
-    lodash-es: ^4.17.11
-    property-expr: ^2.0.2
-    synchronous-promise: ^2.0.13
-    toposort: ^2.0.2
-  checksum: bc07ab697d38169c9fad874696008ec84dab14f5e3559b539c7edb01ea49235808670ea4cb7de64009ed473fb3700e6794ed407c293cb94b2d6c4f34deb16e4b
   languageName: node
   linkType: hard
