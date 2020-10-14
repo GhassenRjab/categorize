@@ -18,7 +18,7 @@ yarn add categorize
 
 ## Example
 
-You can import the library using CommonsJS
+You can import the library using CommonJS
 
 ```js
 const { categorize } = require('categorize');
