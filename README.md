@@ -49,7 +49,7 @@ const categories = [
     filter: ({ type, name }) => type === "Dog" && name === "Spencer",
   },
 ];
-const animalsCategorized = await categorize(animals, categories);
+const animalsCategorized = categorize(animals, categories);
 ```
 
 `animalsCategorized` will contain this object:
@@ -70,25 +70,17 @@ const animalsCategorized = await categorize(animals, categories);
 }
 ```
 
-With this format, you can use array destructuring to have you elements categorized inside their own variables, like this:
+With this format, you can use object destructuring to have you elements categorized inside their own variables, like this:
 
 ```js
-const { cats, dogs } = await categorize(animals, categories);
+const { cats, dogs } = categorize(animals, categories);
 ```
 
-The category's name will be used to contain the array elements. And the category's filter will be used to filter out these array elements.
+The category's name will be used to contain the array elements. And the category's filter will be used to filter them out.
 
 ## Documentation
 
-You can use the async version of categorize wich is called `categorize` (used in the example above), or the sync version which is called `categorizeSync`.
-
-```js
-const { categorizeSync } = require('categorize');
-// animals and categories definitions here
-const { cats, dogs } = categorizeSync(animals, categories);
-```
-
-Both functions accepts the same parameters, which are:
+`categorize` function accepts the same parameters, which are:
 
 - The **array** that will be categorized;
 - The **categories** array, each category needs to have:
