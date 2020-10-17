@@ -9,9 +9,8 @@
 # Source files
 src/
 
-# Test files
-lib/**/*.test.js
-
 # Other files
 .editorconfig
 .eslintrc.js
+.eslintignore
+babel.config.json
