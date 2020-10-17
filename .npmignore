@@ -6,8 +6,11 @@
 !.yarn/versions
 .pnp.*
 
+# Source files
+src/
+
 # Test files
-src/**/*.test.js
+lib/**/*.test.js
 
 # Other files
 .editorconfig

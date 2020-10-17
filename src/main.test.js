@@ -1,4 +1,4 @@
-const categorize = require("./main");
+import categorize from "./main";
 
 test("can categorize an array", () => {
   const animals = [
@@ -33,7 +33,7 @@ test("can categorize an array", () => {
   });
 });
 
-test("should throw an erroray", () => {
+test("throws an error", () => {
   const animals = [
     { name: "Bechbech", type: "Cat" },
     { name: "Machmouch", type: "Cat" },
