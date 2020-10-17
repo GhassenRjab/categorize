@@ -1,5 +1,4 @@
 const validate = require("./validate");
-const ValidationError = require("./ValidationError");
 
 test("arguments are validated", () => {
   const array = [
@@ -16,7 +15,7 @@ test("array is required", () => {
   const categories = [{ name: "cats", filter: ({ type }) => type === "Cat" }];
   expect(() => {
     validate(undefined, categories);
-  }).toThrow(new ValidationError("array is required"));
+  }).toThrow(new TypeError("array is required"));
 });
 
 test("array must be an array", () => {
@@ -24,7 +23,7 @@ test("array must be an array", () => {
   const categories = [{ name: "cats", filter: ({ type }) => type === "Cat" }];
   expect(() => {
     validate(array, categories);
-  }).toThrow(new ValidationError("array must be an array"));
+  }).toThrow(new TypeError("array must be an array"));
 });
 
 test("categories are required", () => {
@@ -35,7 +34,7 @@ test("categories are required", () => {
   ];
   expect(() => {
     validate(array);
-  }).toThrow(new ValidationError("categories are required"));
+  }).toThrow(new TypeError("categories are required"));
 });
 
 test("categories must be an array", () => {
@@ -47,7 +46,7 @@ test("categories must be an array", () => {
   const categories = "cats";
   expect(() => {
     validate(array, categories);
-  }).toThrow(new ValidationError("categories must be an array"));
+  }).toThrow(new TypeError("categories must be an array"));
 });
 
 test("each category must contain a name field", () => {
@@ -59,7 +58,7 @@ test("each category must contain a name field", () => {
   const categories = [{ filter: ({ type }) => type === "Cat" }];
   expect(() => {
     validate(array, categories);
-  }).toThrow(new ValidationError("categories[0].name is a required field"));
+  }).toThrow(new TypeError("categories[0].name is a required field"));
 });
 
 test("a category name can't be empty", () => {
@@ -71,9 +70,7 @@ test("a category name can't be empty", () => {
   const categories = [{ name: "", filter: ({ type }) => type === "Cat" }];
   expect(() => {
     validate(array, categories);
-  }).toThrow(
-    new ValidationError("categories[0].name must be at least 1 characters")
-  );
+  }).toThrow(new TypeError("categories[0].name must be at least 1 characters"));
 });
 
 test("each category must be contain a filter field", () => {
@@ -85,7 +82,7 @@ test("each category must be contain a filter field", () => {
   const categories = [{ name: "cats" }];
   expect(() => {
     validate(array, categories);
-  }).toThrow(new ValidationError("categories[0].filter is a required field"));
+  }).toThrow(new TypeError("categories[0].filter is a required field"));
 });
 
 test("a category filter must be a function", () => {
@@ -97,7 +94,7 @@ test("a category filter must be a function", () => {
   const categories = [{ name: "cats", filter: "Cat" }];
   expect(() => {
     validate(array, categories);
-  }).toThrow(new ValidationError("categories[0].filter must be a function"));
+  }).toThrow(new TypeError("categories[0].filter must be a function"));
 });
 
 test("categories must have unique names", () => {
@@ -112,5 +109,5 @@ test("categories must have unique names", () => {
   ];
   expect(() => {
     validate(array, categories);
-  }).toThrow(new ValidationError("categories must have unique names"));
+  }).toThrow(new TypeError("categories must have unique names"));
 });
