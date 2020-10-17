@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "build": "babel src --out-dir lib --delete-dir-on-start"
+    "build": "babel src --out-dir lib --delete-dir-on-start",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
