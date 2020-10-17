@@ -1,6 +1,6 @@
-const validate = require("./lib/validate");
+import validate from "./lib/validate";
 
-module.exports = (array, categories) => {
+export default (array, categories) => {
   validate(array, categories);
   return array.reduce((result, item) => {
     categories.forEach(({ name, filter }) => {

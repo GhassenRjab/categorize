@@ -1,4 +1,4 @@
-module.exports = (array, categories) => {
+export default (array, categories) => {
   if (!array) {
     throw new TypeError("array is required");
   }
