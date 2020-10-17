@@ -1,6 +1,6 @@
-const { validate, ValidationError } = require("./lib/validation");
+const validate = require("./lib/validate");
 
-exports.categorize = (array, categories) => {
+module.exports = (array, categories) => {
   validate(array, categories);
   return array.reduce((result, item) => {
     categories.forEach(({ name, filter }) => {
@@ -14,5 +14,3 @@ exports.categorize = (array, categories) => {
     return result;
   }, {});
 };
-
-exports.ValidationError = ValidationError;
