@@ -1,4 +1,4 @@
-const validate = require("./validate");
+import validate from "./validate";
 
 test("arguments are validated", () => {
   const array = [

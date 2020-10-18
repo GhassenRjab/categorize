@@ -2,10 +2,14 @@
   "name": "categorize",
   "version": "2.0.0",
   "description": "categorize organizes array elements into categories",
-  "main": "src/main.js",
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.esm.js",
+  "browser": "dist/main.umd.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "build": "rollup --config",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -22,10 +26,15 @@
   },
   "homepage": "https://github.com/GhassenRjab/categorize#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "babel-jest": "^26.5.2",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.5.2",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "rollup": "^2.32.0"
   }
 }

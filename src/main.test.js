@@ -1,4 +1,4 @@
-const categorize = require("./main");
+import categorize from "./main";
 
 test("can categorize an array", () => {
   const animals = [

@@ -21,13 +21,13 @@ yarn add categorize
 You can import the library using CommonJS
 
 ```js
-const { categorize } = require('categorize');
+const categorize = require('categorize');
 ```
 
-Or using ES modules
+Or using ES Modules
 
 ```js
-import { categorize } from 'categorize';
+import categorize from 'categorize';
 ```
 
 Here is an example of how to use it:
@@ -87,12 +87,12 @@ The category's name will be used to contain the array elements. And the category
   - A unique **name** that will be used to contain the categorized elements;
   - A **filter** that will be used to test against the array elements to determine to what category they belong.
 
-This library parameters passed to categorize are validated before starting any computation.
-The function will throw a `ValidationError` if the parameters are not well passed.
-All validation tests can be found [here](src/lib/validation/validate.test.js).
+These library parameters passed to categorize are validated before starting any computation.
+The function will throw a `TypeError` if the parameters are not well passed.
+All validation tests can be found [here](src/lib/validate.test.js).
 
-You can import `ValidationError` like this:
+The library is exported to three different environments:
 
-```js
-const { ValidationError } = require('categorize');
-```
+- Node.js through the main.cjs.js (CommonJS) file;
+- Bundlers through the main.esm.js (ES Modules) file;
+- Browsers through the main.umd.js (UMD) file.
