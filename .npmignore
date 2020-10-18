@@ -6,9 +6,12 @@
 !.yarn/versions
 .pnp.*
 
-# Test files
-src/**/*.test.js
+# Source files
+src/
 
 # Other files
 .editorconfig
-.eslintrc.js
+.eslintrc.json
+.eslintignore
+babel.config.json
+rollup.config.js
