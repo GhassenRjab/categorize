@@ -9,14 +9,11 @@ test("can categorize an array", () => {
     { name: "Pablo", type: "Dog" },
     { name: "Luna", type: "Dog" },
   ];
-  const categories = [
-    { name: "cats", filter: (animal) => animal.type === "Cat" },
-    { name: "dogs", filter: ({ type }) => type === "Dog" },
-    {
-      name: "Spencer",
-      filter: ({ type, name }) => type === "Dog" && name === "Spencer",
-    },
-  ];
+  const categories = {
+    cats: (animal) => animal.type === "Cat",
+    dogs: ({ type }) => type === "Dog",
+    Spencer: ({ type, name }) => type === "Dog" && name === "Spencer",
+  };
   const animalsCategorized = categorize(animals, categories);
   expect(animalsCategorized).toEqual({
     cats: [
@@ -42,15 +39,12 @@ test("should throw an erroray", () => {
     { name: "Pablo", type: "Dog" },
     { name: "Luna", type: "Dog" },
   ];
-  const categories = [
-    { name: "cats", filter: (animal) => animal.type === "Cat" },
-    { name: "dogs", filter: "Dog" },
-    {
-      name: "Spencer",
-      filter: ({ type, name }) => type === "Dog" && name === "Spencer",
-    },
-  ];
+  const categories = {
+    cats: (animal) => animal.type === "Cat",
+    dogs: "Dog",
+    Spencer: ({ type, name }) => type === "Dog" && name === "Spencer",
+  };
   expect(() => {
     categorize(animals, categories);
-  }).toThrow(new TypeError("categories[1].filter must be a function"));
+  }).toThrow(new TypeError("dogs category's filter must be a function"));
 });
