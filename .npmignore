@@ -15,3 +15,4 @@ src/
 .eslintignore
 babel.config.json
 rollup.config.js
+.gitattributes

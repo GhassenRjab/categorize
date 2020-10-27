@@ -30,6 +30,12 @@ Or using ES Modules
 import categorize from 'categorize';
 ```
 
+Or directly throught the CDN
+
+```html
+<script src="https://unpkg.com/categorize@3.0.0/dist/main.umd.js" crossorigin></script>
+```
+
 Here is an example of how to use it:
 
 ```js
@@ -90,9 +96,3 @@ The category's name will be used to contain the array elements. And the category
 These library parameters passed to categorize are validated before starting any computation.
 The function will throw a `TypeError` if the parameters are not well passed.
 All validation tests can be found [here](src/lib/validate.test.js).
-
-The library is exported to three different environments:
-
-- Node.js through the main.cjs.js (CommonJS) file;
-- Bundlers through the main.esm.js (ES Modules) file;
-- Browsers through the main.umd.js (UMD) file.
