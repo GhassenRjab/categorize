@@ -33,7 +33,7 @@ import categorize from 'categorize';
 Or directly throught the CDN
 
 ```html
-<script src="https://unpkg.com/categorize@3.0.0/dist/main.umd.js" crossorigin></script>
+<script src="https://unpkg.com/categorize@3.1.2/dist/main.umd.js" crossorigin></script>
 ```
 
 Here is an example of how to use it:
