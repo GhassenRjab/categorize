@@ -32,5 +32,4 @@ export default (array, categories) => {
   if (uniqueCategoryNames.size !== categories.length) {
     throw new TypeError("categories must have unique names");
   }
-  return true;
 };
