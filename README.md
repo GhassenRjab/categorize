@@ -1,6 +1,6 @@
 # categorize
 
-[![Codecov Coverage](https://img.shields.io/codecov/c/github/GhassenRjab/categorize/&lt;Branch Name>.svg?style=flat-square)](https://codecov.io/gh/GhassenRjab/categorize/)
+[![Codecov Coverage](https://img.shields.io/codecov/c/github/GhassenRjab/categorize/main.svg)](https://codecov.io/gh/GhassenRjab/categorize/)
 
 This library categorizes arrays. It organizes array elements into categories.
 
