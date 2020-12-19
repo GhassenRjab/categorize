@@ -12,21 +12,6 @@ test("arguments are validated", () => {
   }).not.toThrow();
 });
 
-test("array is required", () => {
-  const categories = [{ name: "cats", filter: ({ type }) => type === "Cat" }];
-  expect(() => {
-    validate(undefined, categories);
-  }).toThrow(new TypeError("array is required"));
-});
-
-test("array must be an array", () => {
-  const array = "categorize";
-  const categories = [{ name: "cats", filter: ({ type }) => type === "Cat" }];
-  expect(() => {
-    validate(array, categories);
-  }).toThrow(new TypeError("array must be an array"));
-});
-
 test("categories are required", () => {
   const array = [
     { name: "Bechbech", type: "Cat" },
