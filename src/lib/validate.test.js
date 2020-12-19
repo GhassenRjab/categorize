@@ -16,7 +16,7 @@ test("array is required", () => {
   const categories = [{ name: "cats", filter: ({ type }) => type === "Cat" }];
   expect(() => {
     validate(undefined, categories);
-  }).toThrow(new TypeError("array is required"));
+  }).not.toThrow(new TypeError("array is required"));
 });
 
 test("array must be an array", () => {
