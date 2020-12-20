@@ -1,17 +1,16 @@
 # GitHub Actions' files
-.github
+/.github
 
 # Source files
-src/
+/src
 
 # Code coverage
 /coverage
 
 # Other files
-.editorconfig
-.eslintrc.json
-.eslintignore
-babel.config.json
-rollup.config.js
-.gitattributes
-.CHANGELOG.md
+/.editorconfig
+/.eslintrc.json
+/.eslintignore
+/babel.config.json
+/rollup.config.js
+/.gitattributes
