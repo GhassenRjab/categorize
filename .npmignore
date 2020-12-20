@@ -4,6 +4,9 @@
 # Source files
 src/
 
+# Code coverage
+/coverage
+
 # Other files
 .editorconfig
 .eslintrc.json
@@ -11,3 +14,4 @@ src/
 babel.config.json
 rollup.config.js
 .gitattributes
+.CHANGELOG.md
