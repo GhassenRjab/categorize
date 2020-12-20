@@ -1,7 +1,11 @@
-name: Test the project
-on: pull_request
+name: Sync base branches
+on:
+  push:
+    branches:
+      - main
+      - develop
 jobs:
-  run-tests:
+  sync-codecov:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

@@ -1,7 +1,7 @@
-name: Lint the project
-on: [push, pull_request]
+name: Validate pull request
+on: pull_request
 jobs:
-  run-linter:
+  run-validations:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,3 +10,5 @@ jobs:
           node-version: '12'
       - run: npm ci
       - run: npm run lint
+      - run: npm run test:coverage
+      - uses: codecov/codecov-action@v1
