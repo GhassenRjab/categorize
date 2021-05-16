@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.2.5] - 2021-05-16
+
+### Changed [3.2.4]
+
+- [#18](https://github.com/GhassenRjab/categorize/pull/18) Bump lodash from 4.17.20 to 4.17.21 (Dependabot)
+- [#19](https://github.com/GhassenRjab/categorize/pull/19) Bump hosted-git-info from 2.8.8 to 2.8.9 (Dependabot)
+- [ea28748](https://github.com/GhassenRjab/categorize/commit/ea28748) Update dependencies ([@GhassenRjab](https://github.com/GhassenRjab))
+
 ## [3.2.4] - 2021-02-04
 
 ### Added [3.2.4]
