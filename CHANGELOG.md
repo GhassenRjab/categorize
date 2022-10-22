@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- [9d66a8c](https://github.com/GhassenRjab/categorize/commit/9d66a8c) Use NodeJS 16 in CI ([@GhassenRjab](https://github.com/GhassenRjab))
+- [#27](https://github.com/GhassenRjab/categorize/pull/27) Use NodeJS 16 in CI and update dependencies ([@GhassenRjab](https://github.com/GhassenRjab))
 - [e9a23f0](https://github.com/GhassenRjab/categorize/commit/e9a23f0) Update dependencies ([@GhassenRjab](https://github.com/GhassenRjab))
 
 ## [3.2.5] - 2021-05-16

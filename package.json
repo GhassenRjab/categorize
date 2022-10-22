@@ -1,6 +1,6 @@
 {
   "name": "categorize",
-  "version": "3.2.5",
+  "version": "3.2.6",
   "description": "categorize organizes array elements into categories",
   "main": "dist/main.cjs.js",
   "module": "dist/main.esm.js",
