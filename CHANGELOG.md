@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Changed
+
+- [#27](https://github.com/GhassenRjab/categorize/pull/27) Use NodeJS 16 in CI and update dependencies ([@GhassenRjab](https://github.com/GhassenRjab))
+- [e9a23f0](https://github.com/GhassenRjab/categorize/commit/e9a23f0) Update dependencies ([@GhassenRjab](https://github.com/GhassenRjab))
+
 ## [3.2.5] - 2021-05-16
 
 ### Changed [3.2.4]
