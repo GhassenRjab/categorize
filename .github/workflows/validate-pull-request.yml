@@ -8,11 +8,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "20"
-      - uses: pnpm/action-setup@v2
-        with:
-          version: "8"
-          run_install: true
-      - run: pnpm run format:check
-      - run: pnpm run lint
-      - run: pnpm run test:coverage
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run test:coverage
       - uses: codecov/codecov-action@v3
