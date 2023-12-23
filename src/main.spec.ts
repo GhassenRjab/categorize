@@ -1,7 +1,13 @@
-import categorize from "./main";
+import { expect, test } from "@jest/globals";
+import { categorize } from "./main";
+
+type Animal = {
+  name: string;
+  type: string;
+};
 
 test("can categorize an array", () => {
-  const animals = [
+  const animals: Animal[] = [
     { name: "Bechbech", type: "Cat" },
     { name: "Machmouch", type: "Cat" },
     { name: "Spencer", type: "Dog" },
@@ -10,13 +16,13 @@ test("can categorize an array", () => {
     { name: "Luna", type: "Dog" },
   ];
   const categories = [
-    { name: "cats", filter: (animal) => animal.type === "Cat" },
-    { name: "dogs", filter: ({ type }) => type === "Dog" },
+    { name: "cats", filter: (animal: Animal) => animal.type === "Cat" },
+    { name: "dogs", filter: ({ type }: Animal) => type === "Dog" },
     {
       name: "Spencer",
-      filter: ({ type, name }) => type === "Dog" && name === "Spencer",
+      filter: ({ type, name }: Animal) => type === "Dog" && name === "Spencer",
     },
-  ];
+  ] as const;
   const animalsCategorized = categorize(animals, categories);
   expect(animalsCategorized).toEqual({
     cats: [
@@ -33,24 +39,20 @@ test("can categorize an array", () => {
   });
 });
 
-test("should throw an erroray", () => {
-  const animals = [
+test("result should contain only found categories", () => {
+  const animals: Animal[] = [
     { name: "Bechbech", type: "Cat" },
     { name: "Machmouch", type: "Cat" },
-    { name: "Spencer", type: "Dog" },
-    { name: "Tyzon", type: "Dog" },
-    { name: "Pablo", type: "Dog" },
-    { name: "Luna", type: "Dog" },
   ];
   const categories = [
-    { name: "cats", filter: (animal) => animal.type === "Cat" },
-    { name: "dogs", filter: "Dog" },
-    {
-      name: "Spencer",
-      filter: ({ type, name }) => type === "Dog" && name === "Spencer",
-    },
-  ];
-  expect(() => {
-    categorize(animals, categories);
-  }).toThrow(new TypeError("categories[1].filter must be a function"));
+    { name: "cats", filter: (animal: Animal) => animal.type === "Cat" },
+    { name: "dogs", filter: ({ type }: Animal) => type === "Dog" },
+  ] as const;
+  const animalsCategorized = categorize(animals, categories);
+  expect(animalsCategorized).toEqual({
+    cats: [
+      { name: "Bechbech", type: "Cat" },
+      { name: "Machmouch", type: "Cat" },
+    ],
+  });
 });

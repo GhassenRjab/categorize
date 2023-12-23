@@ -12,7 +12,7 @@
 /.eslintrc.json
 /.eslintignore
 /babel.config.json
-/rollup.config.js
+/tsconfig.json
 /.gitattributes
 /MIGRATING.md
 /CONTRIBUTING.md

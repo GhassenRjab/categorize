@@ -23,19 +23,22 @@ yarn add categorize
 You can import the library using CommonJS
 
 ```js
-const categorize = require('categorize');
+const categorize = require("categorize");
 ```
 
 Or using ES Modules
 
 ```js
-import categorize from 'categorize';
+import categorize from "categorize";
 ```
 
 Or directly throught the CDN
 
 ```html
-<script src="https://unpkg.com/categorize@3.1.2/dist/main.umd.js" crossorigin></script>
+<script
+  src="https://unpkg.com/categorize@3.1.2/dist/main.umd.js"
+  crossorigin
+></script>
 ```
 
 Here is an example of how to use it:
