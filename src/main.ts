@@ -3,21 +3,31 @@ export type Category<T, K extends string> = {
   filter: (element: T) => boolean;
 };
 
-type Result<T, K extends string> = Partial<Record<K, T[]>>;
+export type Result<T, K extends string> = Partial<Record<K, T[]>>;
+
+export type Options = {
+  singleCategoryMatch: boolean;
+};
 
 export function categorize<T, K extends string>(
-  elements: T[],
+  items: T[],
   categories: Readonly<Category<T, K>[]>,
+  options: Options = { singleCategoryMatch: true },
 ): Result<T, K> {
-  return elements.reduce<Result<T, K>>(
-    (result, item) => {
-      categories.forEach(({ name, filter }) => {
-        if (filter(item)) {
-          (result[name] ??= []).push(item);
-        }
-      });
-      return result;
-    },
-    {} as Result<T, K>,
-  );
+  const result: Result<T, K> = {};
+  const itemsLength = items.length;
+  for (let i = 0; i < itemsLength; i++) {
+    const element = items[i];
+
+    const categoriesLength = categories.length;
+    for (let j = 0; j < categoriesLength; j++) {
+      const { name, filter } = categories[j];
+      if (filter(element)) {
+        (result[name] ??= []).push(element);
+        if (options.singleCategoryMatch) break;
+      }
+    }
+  }
+
+  return result;
 }

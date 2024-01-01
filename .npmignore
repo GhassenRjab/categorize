@@ -4,6 +4,12 @@
 # Source files
 /src
 
+# Benchmark files
+/benchmark
+
+# Fixtures
+/fixtures
+
 # Code coverage
 /coverage
 
