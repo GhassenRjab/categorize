@@ -25,7 +25,7 @@ import { categorize } from "categorize";
 By default an item is matched only with the first category. If your categories can host items from other categories you should set `singleCategoryMatch` to `false` in the third and optional parameter `options`
 
 ```js
-const result = categorize(items, categories, { singleCategoryMatch: false })
+const result = categorize(items, categories, { singleCategoryMatch: false });
 ```
 
 ## From v2 to v3

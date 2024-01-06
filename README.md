@@ -101,7 +101,7 @@ const categories = [
   { name: "twisted", filter: ({ horns }) => horns === "Twisted" },
 ] as const; // as const is important to infer the result's type
 const antelopesCategorized = categorize(animals, categories, {
-  singleCategoryMatch: false
+  singleCategoryMatch: false,
 });
 ```
 
@@ -122,7 +122,7 @@ const antelopesCategorized = categorize(animals, categories, {
   "twisted": [
     { "name": "Addax", "continent": "Africa", "horns": "Twisted" },
     { "name": "Bushbuck", "continent": "Africa", "horns": "Twisted" },
-    { "name": "Blackbuck", "continent": "Asia", "horns": "Twisted" },
+    { "name": "Blackbuck", "continent": "Asia", "horns": "Twisted" }
   ]
 }
 ```
@@ -139,4 +139,3 @@ If you don't set `singleCategoryMatch` to `false`, `twisted` category wouldn't b
   - A **filter** that will be used to test against the array items to determine to which category they belong.
 - The optional **options** parameters. With it we can pass:
   - **singleCategoryMatch** option which allow us to tell categorize if want an item to match a single category (`true`) or more (`false`). By default it's set to `true`.
-
