@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Addax",
+    "continent": "Africa",
+    "weight": 220,
+    "height": 41,
+    "horns": "Twisted",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/A_big_male_Addax_showing_as_the_power_of_his_horns.jpg/1280px-A_big_male_Addax_showing_as_the_power_of_his_horns.jpg"
+  },
+  {
+    "name": "Arabian oryx",
+    "continent": "Asia",
+    "weight": 150,
+    "height": 39,
+    "horns": "Straight",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Arabian_oryx_(oryx_leucoryx).jpg/1280px-Arabian_oryx_(oryx_leucoryx).jpg"
+  },
+  {
+    "name": "Bay duiker",
+    "continent": "Africa",
+    "weight": 40,
+    "height": 17,
+    "horns": "Spiky",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Cephalophus_dorsalis.JPG/1920px-Cephalophus_dorsalis.JPG"
+  },
+  {
+    "name": "Blackbuck",
+    "continent": "Asia",
+    "weight": 44,
+    "height": 29,
+    "horns": "Twisted",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Blackbuck-0006.jpg/1024px-Blackbuck-0006.jpg"
+  },
+  {
+    "name": "Bongo",
+    "continent": "Africa",
+    "weight": 500,
+    "height": 48,
+    "horns": "Spiraled",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Tragelaphus_eurycerus_01.JPG/800px-Tragelaphus_eurycerus_01.JPG"
+  },
+  {
+    "name": "Bushbuck",
+    "continent": "Africa",
+    "weight": 110,
+    "height": 35,
+    "horns": "Twisted",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flickr_-_Rainbirder_-_Imbabala_Bushbuck_(Tragelaphus_sylvaticus).jpg"
+  },
+  {
+    "name": "Gemsbok",
+    "continent": "Africa",
+    "weight": 450,
+    "height": 47,
+    "horns": "Straight",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gemsbok_(Oryx_gazella)_male.jpg/1280px-Gemsbok_(Oryx_gazella)_male.jpg"
+  },
+  {
+    "name": "Gerenuk",
+    "continent": "Africa",
+    "weight": 80,
+    "height": 37,
+    "horns": "Lyre-shaped",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/San_Diego_Zoo_Avril_2013_05.JPG/330px-San_Diego_Zoo_Avril_2013_05.JPG"
+  },
+  {
+    "name": "Giant eland",
+    "continent": "Africa",
+    "weight": 900,
+    "height": 60,
+    "horns": "Spiraled",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Giant_eland_(Taurotragus_derbianus_derbianus)_male.jpg/1280px-Giant_eland_(Taurotragus_derbianus_derbianus)_male.jpg"
+  },
+  {
+    "name": "Goa",
+    "continent": "Asia",
+    "weight": 30,
+    "height": 21,
+    "horns": "Curved",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Tibetan_gazelle.jpg/330px-Tibetan_gazelle.jpg"
+  },
+  {
+    "name": "Greater kudu",
+    "continent": "Africa",
+    "weight": 450,
+    "height": 45,
+    "horns": "Twisted",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Male_greater_kudu.jpg/1024px-Male_greater_kudu.jpg"
+  },
+  {
+    "name": "Hartebeest",
+    "continent": "Africa",
+    "weight": 250,
+    "height": 36,
+    "horns": "Twisted",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coke's_Hartebeest.jpg/800px-Coke's_Hartebeest.jpg"
+  },
+  {
+    "name": "Impala",
+    "continent": "Africa",
+    "weight": 100,
+    "height": 30,
+    "horns": "Lyre-shaped",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Trotting_impala_ram%2C_crop.jpg/800px-Trotting_impala_ram%2C_crop.jpg"
+  },
+  {
+    "name": "Klipspringer",
+    "continent": "Africa",
+    "weight": 25,
+    "height": 20,
+    "horns": "Spiky",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Klipspringer.jpg/800px-Klipspringer.jpg"
+  },
+  {
+    "name": "Lechwe",
+    "continent": "Africa",
+    "weight": 180,
+    "height": 35,
+    "horns": "Lyre-shaped",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Red_lechwe_(Kobus_leche_leche)_male.jpg/1280px-Red_lechwe_(Kobus_leche_leche)_male.jpg"
+  },
+  {
+    "name": "Nilgai",
+    "continent": "Asia",
+    "weight": 500,
+    "height": 48,
+    "horns": "Straight",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Nilgai_(Boselaphus_tragocamelus)_male.jpg/1280px-Nilgai_(Boselaphus_tragocamelus)_male.jpg"
+  },
+  {
+    "name": "Nyala",
+    "continent": "Africa",
+    "weight": 220,
+    "height": 40,
+    "horns": "Spiraled",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Nyala%2C_male.jpg/800px-Nyala%2C_male.jpg"
+  },
+  {
+    "name": "Oribi",
+    "continent": "Africa",
+    "weight": 30,
+    "height": 22,
+    "horns": "Straight",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sudan_Oribi_(Ourebia_montana)_male_(18172324646).jpg/1024px-Sudan_Oribi_(Ourebia_montana)_male_(18172324646).jpg"
+  },
+  {
+    "name": "Puku",
+    "continent": "Africa",
+    "weight": 150,
+    "height": 31,
+    "horns": "Lyre-shaped",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Puku_male.jpg"
+  },
+  {
+    "name": "Royal antelope",
+    "continent": "Africa",
+    "weight": 6,
+    "height": 10,
+    "horns": "Spiky",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Antilope_Royale.JPG"
+  },
+  {
+    "name": "Sitatunga",
+    "continent": "Africa",
+    "weight": 180,
+    "height": 36,
+    "horns": "Spiraled",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Sitatunga_Tragelaphus_spekii_gratus_RB1.jpg"
+  },
+  {
+    "name": "Springbok",
+    "continent": "Africa",
+    "weight": 70,
+    "height": 65,
+    "horns": "Curved",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Antidorcas_marsupialis%2C_male_(Etosha%2C_2012).jpg/1280px-Antidorcas_marsupialis%2C_male_(Etosha%2C_2012).jpg"
+  },
+  {
+    "name": "Suni",
+    "continent": "Africa",
+    "weight": 10,
+    "height": 13,
+    "horns": "Curved",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Suni_4.jpg/330px-Suni_4.jpg"
+  },
+  {
+    "name": "Tibetan antelope",
+    "continent": "Asia",
+    "weight": 85,
+    "height": 35,
+    "horns": "Curved",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Atilope_du_Tibet.png"
+  },
+  {
+    "name": "Waterbuck",
+    "continent": "Africa",
+    "weight": 450,
+    "height": 50,
+    "horns": "Spiraled",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ugandan_defassa_waterbuck_(Kobus_ellipsiprymnus_defassa)_male.jpg/1024px-Ugandan_defassa_waterbuck_(Kobus_ellipsiprymnus_defassa)_male.jpg"
+  }
+]
