@@ -57,7 +57,7 @@ const antelopesCategorized = categorize(animals, categories);
 
 Thanks to TypeScript the result is typed!
 
-![Result is typed!](/assets/typed-result.png "Result is typed!")
+![Result is typed!](/assets/typed-result.jpeg "Result is typed!")
 
 `antelopesCategorized` will contain this object:
 
