@@ -1,12 +1,14 @@
 # categorize
 
+> ⚠️ **DEPRECATION NOTICE**: This package is deprecated and is no longer maintained. For grouping and categorizing array elements in modern JavaScript/TypeScript environments, consider using native alternatives such as [`Object.groupBy()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy) or [`Map.groupBy()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy).
+
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/GhassenRjab/categorize/main.svg)](https://codecov.io/gh/GhassenRjab/categorize/)
 
-`categorize` is a utility library that let's us organize array items with a single pass through the array. Which can be more efficient for large datasets.
+`categorize` is a utility library that lets us organize array items with a single pass through the array. Which can be more efficient for large datasets.
 
 `categorize` is useful in scenarios where we need to categorize items based on certain criteria or filters. Here are some use cases where it can be helpful:
 
-- **Filtering and Organizing Data**: If we have a collection of items and we want to organize them into different categories based on specific criteria, `categorize` allows us to do that efficiently;
+- **Filtering and Organizing Data**: If we have a collection of items, and we want to organize them into different categories based on specific criteria, `categorize` allows us to do that efficiently;
 
 - **Data Analysis**: In data analysis scenarios, we might have a dataset and want to categorize items based on different attributes or conditions. `categorize` provides a clean and flexible way to perform such categorization;
 
@@ -48,16 +50,14 @@ const antelopes = [
   { name: "Bushbuck", continent: "Africa", horns: "Twisted" },
 ];
 const categories = [
-  { name: "africa", filter: (antelope) => animal.continent === "Africa" },
+  { name: "africa", filter: (antelope) => antelope.continent === "Africa" },
   { name: "asia", filter: ({ continent }) => continent === "Asia" },
-  { name: "twisted", filter: ({ horns }) => horns === "Asia" },
+  { name: "twisted", filter: ({ horns }) => horns === "Twisted" },
 ] as const; // as const is important to infer the result's type
-const antelopesCategorized = categorize(animals, categories);
+const antelopesCategorized = categorize(antelopes, categories);
 ```
 
-Thanks to TypeScript the result is typed!
-
-![Result is typed!](/assets/typed-result.png "Result is typed!")
+Thanks to TypeScript, the result is typed!
 
 `antelopesCategorized` will contain this object:
 
@@ -72,11 +72,15 @@ Thanks to TypeScript the result is typed!
   "asia": [
     { "name": "Arabian oryx", "continent": "Asia", "horns": "Straight" },
     { "name": "Blackbuck", "continent": "Asia", "horns": "Twisted" }
+  ],
+  "twisted": [
+    { "name": "Bushbuck", "continent": "Africa", "horns": "Twisted" },
+    { "name": "Blackbuck", "continent": "Asia", "horns": "Twisted" }
   ]
 }
 ```
 
-With this format, you can use object destructuring to have you items categorized inside their own variables, like this:
+With this format, you can use object destructuring to have your items categorized inside their own variables, like this:
 
 ```js
 const { africa, asia } = categorize(animals, categories);
@@ -84,7 +88,7 @@ const { africa, asia } = categorize(animals, categories);
 
 The category's name will be used to contain the array items. And the category's filter will be used to filter them out.
 
-By default an item will match the first category only. If you want to make an item match multiple categories you need to set `singleCategoryMatch` to `false` in the `options` parameter.
+By default, an item will match the first category only. If you want to make an item match multiple categories you need to set `singleCategoryMatch` to `false` in the `options` parameter.
 
 ```typescript
 const antelopes = [
@@ -137,5 +141,5 @@ If you don't set `singleCategoryMatch` to `false`, `twisted` category wouldn't b
 - The **categories** array, each category needs to have:
   - A unique **name** that will be used to contain the categorized items;
   - A **filter** that will be used to test against the array items to determine to which category they belong.
-- The optional **options** parameters. With it we can pass:
-  - **singleCategoryMatch** option which allow us to tell categorize if want an item to match a single category (`true`) or more (`false`). By default it's set to `true`.
+- The optional **options** parameter. With it, we can pass:
+  - **singleCategoryMatch** option that allows us to tell `categorize` if we want an item to match a single category (`true`) or more (`false`). By default, it's set to `true`.

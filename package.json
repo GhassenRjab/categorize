@@ -1,7 +1,8 @@
 {
   "name": "categorize",
-  "version": "4.0.0",
-  "description": "categorize organizes array elements into categories",
+  "version": "4.1.0",
+  "description": "[DEPRECATED] categorize organizes array elements into categories",
+  "deprecated": "This package is deprecated and no longer maintained.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "files": [
@@ -16,8 +17,7 @@
     "format": "prettier . --write",
     "codecov": "codecov",
     "build": "tsc --build tsconfig.build.json",
-    "prepublishOnly": "npm run build",
-    "benchmark": "ts-node ./benchmark/benchmark.ts"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.0]
+## [4.1.0] - 2026-09-02
+
+### Deprecated [4.1.0]
+
+- Deprecate package and exports in favor of built-in `Object.groupBy()` and `Map.groupBy()`
+
+## [4.0.0] - 2024-01-06
 
 ### Changed [4.0.0]
 
@@ -14,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.2.5] - 2021-05-16
 
-### Changed [3.2.4]
+### Changed [3.2.5]
 
 - [#18](https://github.com/GhassenRjab/categorize/pull/18) Bump lodash from 4.17.20 to 4.17.21 (Dependabot)
 - [#19](https://github.com/GhassenRjab/categorize/pull/19) Bump hosted-git-info from 2.8.8 to 2.8.9 (Dependabot)
